@@ -310,6 +310,23 @@ class Ucglib_ST7735_18x128x160_SWSPI : public Ucglib4WireSWSPI
     { }
 };
 
+class Ucglib_ST7735S_18x80x160_HWSPI : public Ucglib4WireHWSPI
+{
+  public:
+  Ucglib_ST7735S_18x80x160_HWSPI( uint8_t cd, uint8_t cs = UCG_PIN_VAL_NONE, uint8_t reset = UCG_PIN_VAL_NONE) :
+    Ucglib4WireHWSPI(ucg_dev_st7735s_18x80x160, ucg_ext_st7735_18, /*cd=*/ cd , /*cs=*/ cs, /*reset=*/ reset)
+    { }
+};
+
+class Ucglib_ST7735_18x80x160_SWSPI : public Ucglib4WireSWSPI
+{
+  public:
+  Ucglib_ST7735_18x80x160_SWSPI( uint8_t scl, uint8_t sda, uint8_t cd, uint8_t cs = UCG_PIN_VAL_NONE, uint8_t reset = UCG_PIN_VAL_NONE) :
+    Ucglib4WireSWSPI(ucg_dev_st7735s_18x80x160, ucg_ext_st7735_18, /*scl=*/ scl, /*sda=*/ sda, /*cd=*/ cd , /*cs=*/ cs, /*reset=*/ reset)
+    { }
+};
+
+
 class Ucglib_ILI9341_18x240x320_HWSPI : public Ucglib4WireHWSPI
 {
   public:
